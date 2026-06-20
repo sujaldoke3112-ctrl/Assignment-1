@@ -1,0 +1,172 @@
+/* --- ADVANCED navbar.css - Burger King Clone --- */
+
+.bk-navbar {
+    background-color: rgba(255, 255, 255, 0.92); /* Slight transparency */
+    backdrop-filter: blur(12px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(80, 35, 20, 0.08); /* Softer, wider shadow using BK Brown */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+/* Typography & Colors for Nav */
+.orangeText {
+    color: #F2A900; /* BK Orange */
+    font-weight: 900;
+    margin: 0;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.orangeText:hover {
+    transform: scale(1.05); /* Slight pop on hover */
+}
+
+/* Advanced Nav Item Links */
+.customNavItem {
+    color: #502314; /* BK Brown */
+    text-decoration: none;
+    font-weight: 800;
+    padding: 8px 15px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Animated Underline Effect */
+.customNavItem::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: #D62300; /* BK Red */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.customNavItem:hover::after {
+    width: 70%; /* Line grows from center on hover */
+}
+
+.customNavItem:hover {
+    color: #D62300; /* BK Red */
+    transform: translateY(-2px); /* Lifts up slightly */
+}
+
+/* Clean transparent buttons (like the Login button) */
+.btnNoBorder {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Advanced Cart Button Styling */
+@keyframes cartPulse {
+    0% { box-shadow: 0 3px 0 #502314, 0 0 0 0 rgba(214, 35, 0, 0.4); }
+    70% { box-shadow: 0 3px 0 #502314, 0 0 0 10px rgba(214, 35, 0, 0); }
+    100% { box-shadow: 0 3px 0 #502314, 0 0 0 0 rgba(214, 35, 0, 0); }
+}
+
+.cart-btn-custom {
+    background-color: #D62300;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 900;
+    box-shadow: 0 3px 0 #502314;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy hover transition */
+    animation: cartPulse 2s infinite; /* Attention-grabbing pulse */
+    cursor: pointer;
+}
+
+.cart-btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 #502314, 0 10px 20px rgba(214, 35, 0, 0.3); /* Higher 3D pop and glow */
+    animation: none; /* Stops pulsing when hovering */
+}
+
+.cart-btn-custom:active {
+    transform: translateY(3px); /* Squishes down when clicked */
+    box-shadow: 0 0px 0 #502314;
+}
+
+/* Advanced Search Input Styling */
+.nav-search-input {
+    border-radius: 25px;
+    border: 2px solid #E5E5E5;
+    padding: 8px 20px;
+    font-weight: bold;
+    color: #502314;
+    background-color: #f8f9fa;
+    width: 200px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth expansion */
+}
+
+.nav-search-input:focus {
+    outline: none;
+    width: 260px; /* Expands smoothly when clicked */
+    border-color: #F2A900;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(242, 169, 0, 0.15); /* Soft BK Orange focus glow */
+}
+
+.nav-search-input::placeholder {
+    color: #a0a0a0;
+    transition: opacity 0.2s ease;
+}
+
+.nav-search-input:focus::placeholder {
+    opacity: 0.5; /* Fades placeholder slightly when typing */
+}
+
+.bk-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+}
+
+.bk-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.bk-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #888888;
+    transition: 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border-radius: 34px;
+}
+
+.bk-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    border-radius: 50%;
+}
+
+.bk-toggle-switch input:checked + .bk-toggle-slider {
+    background-color: #502314;
+}
+
+.bk-toggle-switch input:checked + .bk-toggle-slider:before {
+    transform: translateX(26px);
+}

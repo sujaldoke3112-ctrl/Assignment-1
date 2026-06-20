@@ -1,0 +1,143 @@
+.our-menu-section {
+    padding: 40px 0;
+    max-width: 1300px;
+}
+
+.menu-carousel-wrapper {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bg-band {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    height: 140px;
+    background-color: #f3e8dd;
+    z-index: 1;
+}
+
+.menu-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 25px;
+    padding: 10px 45px;
+    z-index: 2;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+.menu-track::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 130px;
+}
+
+.menu-card {
+    background-color: #ffffff;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.menu-item p {
+    text-align: center;
+    color: #000000;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.menu-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 3;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.menu-arrow:hover {
+    background-color: #f8f8f8;
+    color: #000000;
+}
+
+
+
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.explore-menu-btn {
+    background-color: #502314;
+    color: #ffffff;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 30px;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.explore-menu-btn:hover {
+    transform: scale(1.03);
+}
+
+.menu-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:0.4s;
+}
+
+.menu-card:hover img{
+    transform:scale(1.08);
+}

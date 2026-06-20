@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Burger King</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./storelocator.css">
+    <link rel="stylesheet" href="./Heroslider.css">
+    <link rel="stylesheet" href="./Menuslider.css">
+    <link rel="stylesheet" href="./Login.css">
+</head>
+
+<body>
+
+    <nav class="w-100 bg-white shadow-sm py-2 position-sticky top-0" style="z-index: 1000;">
+        <div class="d-flex justify-content-around align-items-center">
+            <div>
+                <a class="navbar-brand" href="index.html" style="position: relative; z-index: 1050; cursor: pointer;">
+                    <img src="./assests/logo.png" alt="Burger King" style="width: 50px; height: auto;">
+                </a>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-3 pe-4 border-end border-2">
+                    <span class="fw-bold text-muted" style="font-size: 14px; letter-spacing: 0.5px;">DELIVERY</span>
+
+                    <label class="bk-toggle-switch m-0">
+                        <input type="checkbox" checked>
+                        <span class="bk-toggle-slider"></span>
+                    </label>
+
+                    <span class="fw-bold lh-sm" style="color: #502314; font-size: 14px; letter-spacing: 0.5px;">
+                        DINE-<br>IN/TAKEAWAY
+                    </span>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-pill" placeholder="Search Stores Near By"
+                        aria-label="Store Locator">
+                </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+                <a href="./storeLocator.html" class="customNavItem">Near By Stores
+                    <i class="fa-solid fa-store"></i>
+                </a>
+                <a href="./offers.html" class="customNavItem">King Deals
+                    <i class="fa-solid fa-certificate"></i>
+                </a>
+                <a href="#loginModal" class="nav-link customNavItem d-flex align-items-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#loginModal"
+                    style="font-size: 18px; text-transform: capitalize;">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+                <button class="btn fw-bold px-4 rounded-pill" style="background-color: #D62300; color: white;"
+                    onclick="openMessageForCart()">Cart</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="menu-page-container container my-5">
+        <h2 class="menu-page-heading mb-4"></h2>
+
+        <div class="row g-4">
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400"
+                            alt="Whopper Deluxe" class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Any Whopper Deluxe @ 99</h5>
+                                <span class="veg-badge veg-only">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Choose Any Whopper Deluxe @ Rs. 99 this Father's
+                                Day.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing">
+                                <span class="current-price">₹ 99/-</span>
+                                <span class="original-price text-muted">₹ 179/-</span>
+                            </div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100 position-relative overflow-hidden">
+                    <div class="new-ribbon">NEW</div>
+
+                    <div class="menu-img-wrapper position-relative">
+                        <div class="top-right-badges">
+                            <i class="fa-solid fa-pepper-hot text-danger chilli-icon d-block mb-1 text-end"></i>
+                            <div class="protein-stat-badge"><span class="fw-bold">19.1g</span> <i
+                                    class="fa-solid fa-dumbbell"></i><br><span class="label-txt">Protein</span></div>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b?w=400"
+                            alt="Korean Kimchi" class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Any Korean Kimchi Burger @ 179</h5>
+                                <span class="veg-badge veg-only">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Choose Any Korean Kimchi Burger @ Rs. 179 this
+                                Father's Day.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing">
+                                <span class="current-price">₹ 179/-</span>
+                                <span class="original-price text-muted">₹ 199/-</span>
+                            </div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400"
+                            alt="Crispy Chicken" class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Crispy Chicken Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Our classic crispy chicken patty topped with fresh
+                                lettuce and creamy mayo.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing">
+                                <span class="current-price">₹ 129/-</span>
+                                <span class="original-price text-muted">₹ 149/-</span>
+                            </div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=400" alt="Cheesy Fries"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">King Cheesy Fries</h5>
+                                <span class="veg-badge veg-only">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Golden crispy fries loaded with warm, melted
+                                cheddar cheese sauce.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing">
+                                <span class="current-price">₹ 99/-</span>
+                                <span class="original-price text-muted">₹ 119/-</span>
+                            </div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=400" alt="Veg Taco"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Veg Crunchy Taco</h5>
+                                <span class="veg-badge veg-only">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Crunchy corn shell stuffed with premium greens,
+                                beans, and signature sauces.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing">
+                                <span class="current-price">₹ 79/-</span>
+                                <span class="original-price text-muted">₹ 99/-</span>
+                            </div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400"
+                            alt="Chocolate Shake" class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Chocolate Thick Shake</h5>
+                                <span class="veg-badge veg-only">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Creamy, ultra-thick milkshake crafted with dark
+                                chocolate cocoa and ice cream.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing">
+                                <span class="current-price">₹ 129/-</span>
+                                <span class="original-price text-muted">₹ 159/-</span>
+                            </div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Chicken Whopper</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Flame-grilled chicken patty with fresh veggies and
+                                creamy mayo.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 249/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Veg Whopper</h5>
+                                <span class="veg-badge">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Delicious veggie patty with crunchy lettuce and
+                                tomatoes.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 199/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Crispy Chicken Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Extra crispy chicken fillet with signature spicy
+                                sauce.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 179/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Double Whopper</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Two juicy flame-grilled patties loaded with fresh
+                                toppings.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 349/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Paneer Royale Burger</h5>
+                                <span class="veg-badge">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Grilled paneer patty with rich sauces and veggies.
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 229/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Chicken Tandoori Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Indian-style tandoori chicken burger with spicy
+                                flavors.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 219/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Cheese Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Classic burger topped with melted cheese and
+                                sauces.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 159/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Veggie Supreme</h5>
+                                <span class="veg-badge">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Loaded veggie burger with fresh lettuce and
+                                cheese.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 189/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">King Chicken Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Large chicken burger packed with premium
+                                ingredients.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 279/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">BBQ Chicken Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Smoky BBQ chicken burger with tangy signature
+                                sauce.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 239/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper"><img
+                            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300" alt="Item"
+                            class="menu-product-img"></div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Paneer Royale Burger</h5><span class="veg-badge veg-only">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Thick fried paneer slab layered with rich premium
+                                dressing crumbs.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 159/-</span></div><button
+                                class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Fiery Chicken Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Spicy crispy chicken burger with fiery sauce.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 209/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Mexican Veg Burger</h5>
+                                <span class="veg-badge">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Veg patty with Mexican spices and fresh veggies.
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 189/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Chicken Cheese Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Chicken burger loaded with creamy cheese.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 229/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Maharaja Chicken Burger</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Premium chicken burger with double layers.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 349/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Paneer King Burger</h5>
+                                <span class="veg-badge">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Rich paneer patty with cheese and sauces.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 239/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Veg Double Patty Burger</h5>
+                                <span class="veg-badge">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Double veggie patties with crunchy lettuce.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 219/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Chicken BBQ King</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Smoky BBQ chicken burger with premium toppings.
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 259/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Spicy Chicken Crunch</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Crunchy chicken burger with spicy seasoning.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 199/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Classic Veg Burger</h5>
+                                <span class="veg-badge">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Simple and tasty vegetable burger for everyone.
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 149/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400" alt="Item"
+                            class="menu-product-img">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Ultimate Whopper</h5>
+                                <span class="veg-badge non-veg">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">The biggest Whopper with premium toppings and
+                                cheese.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 399/-</span></div>
+                            <button class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper"><img
+                            src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=300" alt="Item"
+                            class="menu-product-img"></div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Cheesy Coin Pops</h5><span class="veg-badge veg-only">
+                                    <div></div>
+                                </span>
+                            </div>
+                            <p class="product-description text-muted">Small rounded dynamic fried safe dough filled
+                                inside completely with pure cheese cream.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing"><span class="current-price">₹ 89/-</span></div><button
+                                class="btn add-product-btn">ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card menu-product-card h-100">
+                    <div class="menu-img-wrapper">
+                        <img src="https://cookilicious.com/wp-content/uploads/2025/01/Brownie-Milkshake-Recipe-20-scaled.jpg"
+                            alt="Chocolate Shake" class="menu-product-img">
+                    </div>
+
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="product-title">Chocolate Shake</h5>
+                                <span class="veg-badge">
+                                    <div></div>
+                                </span>
+                            </div>
+
+                            <p class="product-description text-muted">
+                                Rich and creamy chocolate milkshake topped with whipped cream.
+                            </p>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="product-pricing">
+                                <span class="current-price">₹ 149/-</span>
+                            </div>
+
+                            <button class="btn add-product-btn">
+                                ADD +
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

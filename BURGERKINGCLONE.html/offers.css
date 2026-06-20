@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.deals-banner {
+    background-color: #EBB422;
+    position: relative;
+    text-align: center;
+    padding: 30px 0 40px 0;
+    overflow: hidden;
+}
+
+.crown-counter {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    background-color: #ffffff;
+    padding: 6px 20px 6px 15px;
+    border-radius: 20px 0 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.crown-counter span {
+    color: #D62300;
+    font-weight: 900;
+}
+
+.deals-title {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.deals-toggle-container {
+    display: flex;
+    justify-content: center;
+}
+
+.deals-toggle {
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: inline-flex;
+    padding: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn {
+    border: none;
+    background: transparent;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 25px;
+    padding: 8px 25px;
+    cursor: pointer;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.inactive {
+    color: #888888;
+}
+
+.toggle-btn.active {
+    background-color: #502314;
+    color: #ffffff;
+}
+
+.deals-content {
+    background: linear-gradient(to right, #FDF5EC, #EFA675);
+    min-height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.inner-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+.limited-deals-title {
+    color: #000000;
+    font-weight: 900;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.deals-tabs {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.tab-btn {
+    border: none;
+    background: transparent;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background-color: #ffffff;
+    color: #502314;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn.inactive {
+    color: #666666;
+    padding: 8px 10px;
+}
+
+.empty-state {
+    text-align: center;
+    color: #000000;
+    font-weight:900;
+    font-size: 14px;
+}
+
+.help-section {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.help-btn {
+    background-color: #502314;
+    color: #ffffff;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.help-btn:hover {
+    transform: scale(1.1);
+}
+
+.crown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #502314;
+    
+}
+
+.crown-image {
+    width: 85%;
+    max-width: 1350px;
+    height: auto;
+    display: block;
+
+
+    
+    
+}
+
+.loyalty-disclaimer {
+    background-color: #fcfaf2; 
+    color: #000000; 
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500; 
+    padding: 6px 10px; 
+    margin: 0;
+    width: 100%;
+}
+
+
+.loyalty-outer-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important; 
+}
+
+.bk-footer {
+    margin-top: 0 !important;
+}
+

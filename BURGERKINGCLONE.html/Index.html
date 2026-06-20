@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Burger King Clone - HomePage</title>
+
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./storelocator.css">
+    <link rel="stylesheet" href="./Heroslider.css">
+    <link rel="stylesheet" href="./Menuslider.css">
+    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="w-100 bg-white shadow-sm py-2 position-sticky top-0" style="z-index: 1000;">
+        <div class="d-flex justify-content-around align-items-center">
+            <div>
+                <a class="navbar-brand" href="index.html" style="position: relative; z-index: 1050; cursor: pointer;">
+                    <img src="./Bklogo.png" alt="Burger King" style="width: 50px; height: auto;">
+                </a>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-3 pe-4 border-end border-2">
+                    <span class="fw-bold text-muted" style="font-size: 14px; letter-spacing: 0.5px;">DELIVERY</span>
+
+                    <label class="bk-toggle-switch m-0">
+                        <input type="checkbox" checked>
+                        <span class="bk-toggle-slider"></span>
+                    </label>
+
+                    <span class="fw-bold lh-sm" style="color: #502314; font-size: 14px; letter-spacing: 0.5px;">
+                        DINE-<br>IN/TAKEAWAY
+                    </span>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-pill" placeholder="Search Stores Near By"
+                        aria-label="Store Locator">
+                </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+                <a href="./storeLocator.html" class="customNavItem">Near By Stores
+                    <i class="fa-solid fa-store"></i>
+                </a>
+                <a href="./offers.html" class="customNavItem">King Deals
+                    <i class="fa-solid fa-certificate"></i>
+                </a>
+                <a href="#loginModal" class="nav-link customNavItem d-flex align-items-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#loginModal"
+                    style="font-size: 18px; text-transform: capitalize;">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+                <button class="btn fw-bold px-4 rounded-pill" style="background-color: #D62300; color: white;"
+                    onclick="openMessageForCart()">Cart</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-login-modal">
+
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <div class="modal-body text-center px-5 pt-0">
+                    <img src="./assests/logo.png" alt="Burger King" class="login-logo mb-3">
+                    <h2 class="login-title">Login</h2>
+                    <p class="login-subtitle">Enter your mobile number to proceed</p>
+
+                    <div class="phone-input-group mb-4">
+                        <span class="country-code">+91</span>
+                        <input type="tel" class="phone-input" placeholder="Enter 10 digit mobile number" maxlength="10">
+                    </div>
+
+                    <button class="btn login-submit-btn w-100 mb-4" disabled>ENTER 10 DIGIT PHONE NUMBER</button>
+
+                    <div class="login-divider">
+                        <span>or</span>
+                    </div>
+                    <p class="login-subtitle mt-3 mb-3">Login Using</p>
+
+                    <button class="btn google-login-btn">
+                        <img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" alt="Google"
+                            width="20"> Sign in with Google
+                    </button>
+                </div>
+
+                <div class="login-footer">
+                    <p class="m-0">By continuing, you agree for our <a href="#">Terms & Conditions</a>, <a
+                            href="#">Privacy Policy</a>, and <a href="#">Promotional T&C</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <div id="bkHeroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bkHeroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true"></button>
+                <button type="button" data-bs-target="#bkHeroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#bkHeroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#bkHeroCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#bkHeroCarousel" data-bs-slide-to="4"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="carousel-slide-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1999&auto=format&fit=crop');">
+                        <div class="carousel-caption-custom">
+                            <h1 class="display-3 fw-bold" style="color: #F2A900;">CRISPY. JUICY. TASTY.</h1>
+                            <p class="lead mb-4 text-white">Try our signature flame-grilled burgers today.</p>
+                            <button class="btn btn-lg fw-bold px-5 border-0 cta-btn">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-slide-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1576107232684-1279f390859f?q=80&w=2000&auto=format&fit=crop');">
+                        <div class="carousel-caption-custom">
+                            <h1 class="display-3 fw-bold" style="color: #F2A900;">LOADED FRIES</h1>
+                            <p class="lead mb-4 text-white">Crispy, golden, and smothered in cheese.</p>
+                            <button class="btn btn-lg fw-bold px-5 border-0 cta-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-slide-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1610440042657-612c34d95e9f?q=80&w=2000&auto=format&fit=crop');">
+                        <div class="carousel-caption-custom">
+                            <h1 class="display-3 fw-bold text-white">KING DEALS ARE BACK</h1>
+                            <p class="lead mb-4 text-white">Get the ultimate combo meal for less.</p>
+                            <button class="btn btn-lg fw-bold px-5 border-0 cta-btn"
+                                style="background-color: #D62300; color: white;">View Deals</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-slide-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=2000&auto=format&fit=crop');">
+                        <div class="carousel-caption-custom">
+                            <h1 class="display-3 fw-bold" style="color: #6fb327;">100% VEG. 100% TASTE.</h1>
+                            <p class="lead mb-4 text-white">Taste the plant-based revolution today.</p>
+                            <button class="btn btn-lg fw-bold px-5 border-0 cta-btn">Order Veg</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-slide-bg"
+                        style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=2000&auto=format&fit=crop');">
+                        <div class="carousel-caption-custom">
+                            <h1 class="display-3 fw-bold" style="color: #F2A900;">SWEET TREATS</h1>
+                            <p class="lead mb-4 text-white">End your meal on a high note with our delicious desserts.
+                            </p>
+                            <button class="btn btn-lg fw-bold px-5 border-0 cta-btn">Order Desserts</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="our-menu-section container my-5 position-relative">
+        <div class="d-flex justify-content-between align-items-center mb-4 px-4">
+            <h2 class="mb-0" style="color: #502314; font-weight: 900; font-size: 28px;">OUR MENU</h2>
+            <a href="#" class="text-decoration-none" style="color: #502314; font-weight: 800; font-size: 15px;">See All
+                ></a>
+        </div>
+
+        <div class="menu-carousel-wrapper position-relative">
+            <div class="menu-bg-band"></div>
+
+            <button class="menu-arrow left-arrow" onclick="scrollMenu(-400)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="menu-track" id="menuTrack">
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300" alt="Crispy Veg">
+                    </div>
+                    <p>Crispy Veg<br>Burger</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=300" alt="Veg Whopper">
+                    </div>
+                    <p>Veg<br>Whopper</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=300"
+                            alt="Crispy Chicken">
+                    </div>
+                    <p>Crispy Chicken<br>Burger</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300"
+                            alt="Chicken Whopper">
+                    </div>
+                    <p>Chicken<br>Whopper</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b?w=300"
+                            alt="Fiery Chicken">
+                    </div>
+                    <p>Fiery Chicken<br>Burger</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300"
+                            alt="Paneer Royale">
+                    </div>
+                    <p>Paneer<br>Royale</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300"
+                            alt="Cheese Meltdown">
+                    </div>
+                    <p>Cheese<br>Meltdown</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=300"
+                            alt="Veggie Strips">
+                    </div>
+                    <p>Veggie<br>Strips</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=300"
+                            alt="Chicken Fries">
+                    </div>
+                    <p>Chicken<br>Fries</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=300" alt="King Fries">
+                    </div>
+                    <p>King Fries<br>(Regular)</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=300"
+                            alt="Cheesy Fries">
+                    </div>
+                    <p>Cheesy<br>Fries</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=300"
+                            alt="Peri Peri Fries">
+                    </div>
+                    <p>Peri Peri<br>Fries</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=300" alt="Veg Taco">
+                    </div>
+                    <p>Veg Crunchy<br>Taco</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38174c4a6471?w=300"
+                            alt="Chicken Taco">
+                    </div>
+                    <p>Chicken Crunchy<br>Taco</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=300"
+                            alt="Chocolate Shake">
+                    </div>
+                    <p>Chocolate<br>Thick Shake</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6cf7?w=300" alt="Berry Blast">
+                    </div>
+                    <p>Berry<br>Blast</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=300" alt="Pepsi">
+                    </div>
+                    <p>Pepsi<br>(Medium)</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300" alt="Choco Lava">
+                    </div>
+                    <p>Choco Lava<br>Cup</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1615297928064-24977384d0da?w=300" alt="King Egg">
+                    </div>
+                    <p>King Egg<br>Burger</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=300" alt="Whopper Jr">
+                    </div>
+                    <p>Whopper Jr.<br>(Veg)</p>
+                </div>
+
+            </div>
+
+            <button class="menu-arrow right-arrow" onclick="scrollMenu(400)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="Menu.html" class="text-decoration-none">
+                <button class="explore-menu-btn">EXPLORE FULL MENU</button>
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <div class="bk-wall-container">
+            <img src="./BKwall.jpg" alt="BK Wall" class="BK-wall">
+        </div>
+    </section>
+
+
+
+    <footer class="bk-footer">
+        <div class="footer-top">
+
+            <div class="footer-column">
+                <h4>BK&reg; INFO</h4>
+                <a href="#">About BK&reg;</a>
+                <a href="#">Fresh Taste</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Fssai</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>CONTACT</h4>
+                <a href="#">FAQ's & Support</a>
+                <p class="footer-subtext">Write to us :</p>
+                <a href="#">Careers</a>
+                <a href="#">Customer Care</a>
+                <a href="#">Supply Chain Queries</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Franchising</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>BK&reg; CARES</h4>
+                <a href="#">Nutrition Information</a>
+                <a href="#">Creating Brighter Futures</a>
+                <a href="#">Trust & Taste</a>
+                <a href="#">COVID-19 Safety</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>LEGAL</h4>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Promotional T & C</a>
+                <a href="#">Compliance</a>
+            </div>
+
+            <div class="footer-column app-column">
+                <h4>DOWNLOAD OUR APP</h4>
+                <div class="app-badges-row">
+                    <a href="#"><img src="./Apple Store.png" alt="App Store" class="app-badge"></a>
+                    <a href="#"><img src="./Google Play.png" alt="Google Play" class="app-badge"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-divider-container">
+            <hr class="footer-divider">
+        </div>
+
+        <div class="footer-bottom">
+            <img src="./assests/logo.png" alt="BK Logo" class="footer-logo">
+            <p>TM & &copy; 2026 BURGER KING COMPANY LLC . All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #F5F5DC; border-radius: 15px;">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-5">
+                    <div class="container text-center">
+                        <img src="./Burgerkinglogo.png" alt="BK Logo" width="80" class="mb-3">
+                        <h4 style="color: #502314; font-weight: 900;">LOGIN</h4>
+                        <p class="text-muted">Enter your phone number to proceed</p>
+
+                        <div class="login-box mt-4">
+                            <div
+                                class="phone-input d-flex align-items-center border-bottom border-2 border-secondary pb-2 mb-4">
+                                <span class="fw-bold pe-3 border-end border-2">+91</span>
+                                <input type="text" placeholder="Enter 10 digit mobile number" maxlength="10"
+                                    class="form-control border-0 bg-transparent shadow-none ms-2 fw-bold">
+                            </div>
+
+                            <button class="btn w-100 fw-bold py-3 mb-4 rounded-pill"
+                                style="background-color: #D62300; color: white;">ENTER PHONE NUMBER</button>
+
+                            <div class="divider text-muted mb-3">or</div>
+
+                            <button
+                                class="btn w-100 fw-bold py-2 bg-white border border-2 rounded d-flex align-items-center justify-content-center gap-2">
+                                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                                    width="24">
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

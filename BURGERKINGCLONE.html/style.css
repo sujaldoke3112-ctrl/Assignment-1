@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap');
+
+* {
+    font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F5F5DC !important;
+    color: #502314;
+}
+
+.OffersSec {
+    height: 200px;
+    background-image: linear-gradient(to right, #ffffff, #F2A900);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.BKLoyaltyCrown {
+    background-color: #502314; 
+    padding-bottom: 3rem;
+}
+
+.customYelloHeading {
+    background-color: #F2A900; 
+    color: #502314;
+    font-weight: 900;
+}
+
+.cutomCoinColletor, .customPlayAndWin, .customRedeem {
+    height: 200px;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.cutomCoinColletor {
+    background-color: #D62300; 
+}
+
+.customPlayAndWin {
+    background-color: #FFFFFF; 
+    color: #502314;
+}
+
+.customRedeem {
+    background-color: #F2A900; 
+    color: #502314;
+}
+
+.orangeText {
+    color: #F2A900;
+}
+
+.customNavItem {
+    color: #502314;
+    text-decoration: none;
+    font-weight: 800;
+    padding-right: 15px;
+    transition: color 0.2s ease;
+}
+
+.customNavItem:hover {
+    color: #D62300;
+}
+
+.btnNoBorder {
+    border: 0;
+    background-color: transparent;
+}
+
+.bk-footer {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    margin-top: 50px;
+    padding: 60px 0 30px 0;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    gap: 30px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    color: #ffffff;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-column a {
+    color: #d3d3d3;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-subtext {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 0 12px 0;
+}
+
+.app-column {
+    align-items: flex-start;
+}
+
+.app-column h4 {
+    text-align: left;
+    color: #ffffff;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.app-badges-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.app-badge {
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.app-badges-row a:first-child .app-badge {
+    width: 140px;
+}
+
+.app-badges-row a:last-child .app-badge {
+    width: 125px;
+}
+
+.app-badge:hover {
+    transform: scale(1.05);
+}
+
+.footer-divider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px 0;
+}
+
+.footer-logo {
+    width: 45px;
+    height: auto;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    flex: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    color: #2b2b2b;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.bk-wall-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.BK-wall{
+    width: 85%;
+    max-width: 1350px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+

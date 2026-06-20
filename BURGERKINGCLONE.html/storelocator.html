@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Stores - Burger King</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./storelocator.css">
+    <link rel="stylesheet" href="./Heroslider.css">
+    <link rel="stylesheet" href="./Menuslider.css">
+    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="./offers.css">
+</head>
+
+<body>
+
+
+    <nav class="w-100 bg-white shadow-sm py-2 position-sticky top-0" style="z-index: 1000;">
+        <div class="d-flex justify-content-around align-items-center">
+            <div>
+                <a class="navbar-brand" href="index.html" style="position: relative; z-index: 1050; cursor: pointer;">
+                    <img src="./Bklogo.png" alt="Burger King" style="width: 50px; height: auto;">
+                </a>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-3 pe-4 border-end border-2">
+                    <span class="fw-bold text-muted" style="font-size: 14px; letter-spacing: 0.5px;">DELIVERY</span>
+
+                    <label class="bk-toggle-switch m-0">
+                        <input type="checkbox" checked>
+                        <span class="bk-toggle-slider"></span>
+                    </label>
+
+                    <span class="fw-bold lh-sm" style="color: #502314; font-size: 14px; letter-spacing: 0.5px;">
+                        DINE-<br>IN/TAKEAWAY
+                    </span>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-pill" placeholder="Search Stores Near By"
+                        aria-label="Store Locator">
+                </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+                <a href="./storeLocator.html" class="customNavItem">Near By Stores
+                    <i class="fa-solid fa-store"></i>
+                </a>
+                <a href="./offers.html" class="customNavItem">King Deals
+                    <i class="fa-solid fa-certificate"></i>
+                </a>
+                <a href="#loginModal" class="nav-link customNavItem d-flex align-items-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#loginModal"
+                    style="font-size: 18px; text-transform: capitalize;">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+                <button class="btn fw-bold px-4 rounded-pill" style="background-color: #D62300; color: white;"
+                    onclick="openMessageForCart()">Cart</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="store-locator-container">
+
+        <div class="search-wrapper">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search for your location">
+                <button class="detect-btn">
+                    <i class="fa-solid fa-crosshairs"></i> Detect location
+                </button>
+            </div>
+        </div>
+
+        <div class="store-list">
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>CRYSTAL MALL, RAJKOT</h3>
+                        <p class="timing">Store Timing (10.00 AM-3.00 AM)</p>
+                        <p class="address">Crystal Mall, Ground Floor, 2/A/1, Opposite Rani Tower, Kalawad Road, Rajkot.
+                        </p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">0 km away • 0 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>PRAHLAD NAGAR, AHMEDABAD</h3>
+                        <p class="timing">Store Timing (9.00 AM-5.00 AM)</p>
+                        <p class="address">Burger King Ltd, shop no. 01, Venus Atlantis Business Park, 100ft main road,
+                            Anand nagar, Ahmedabad 380015</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">197.08 km away • 9 hrs 51 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>ALPHA ONE MALL, AHMEDABAD</h3>
+                        <p class="timing">Store Timing (10.00 AM-11.00 PM)</p>
+                        <p class="address">Food Court, 3rd Floor, Alpha One Mall, Vastrapur, Ahmedabad 380054</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">199.5 km away • 4 hrs 10 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>CG ROAD, AHMEDABAD</h3>
+                        <p class="timing">Store Timing (11.00 AM-2.00 AM)</p>
+                        <p class="address">Ground Floor, CG Square Mall, CG Road, Navrangpura, Ahmedabad 380009</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">202.1 km away • 4 hrs 20 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>RELIANCE MALL, JAMNAGAR</h3>
+                        <p class="timing">Store Timing (10.00 AM-10.00 PM)</p>
+                        <p class="address">Reliance Mega Mall, Khodiyar Colony, Jamnagar 361006</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">90.5 km away • 1 hr 45 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>VR MALL, SURAT</h3>
+                        <p class="timing">Store Timing (11.00 AM-11.00 PM)</p>
+                        <p class="address">VR Surat, Dumas Road, Magdalla, Surat 395007</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">450.2 km away • 8 hrs 30 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>INORBIT MALL, VADODARA</h3>
+                        <p class="timing">Store Timing (11.00 AM-10.30 PM)</p>
+                        <p class="address">Inorbit Mall, Alembic Road, Gorwa, Vadodara 390023</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">310.4 km away • 6 hrs 15 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>NEXUS PALLADIUM, AHMEDABAD</h3>
+                        <p class="timing">Store Timing (11.00 AM-11.00 PM)</p>
+                        <p class="address">Palladium Ahmedabad, SG Highway, Thaltej, Ahmedabad 380054</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">205.8 km away • 4 hrs 25 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>ISCON MEGA MALL, RAJKOT</h3>
+                        <p class="timing">Store Timing (10.00 AM-10.00 PM)</p>
+                        <p class="address">Iscon Mega Mall, 150 Feet Ring Road, Rajkot 360005</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">5.2 km away • 15 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+            <div class="store-card">
+                <div class="store-top">
+                    <div class="store-info">
+                        <h3>SINDHU BHAVAN ROAD, AHMEDABAD</h3>
+                        <p class="timing">Store Timing (10.00 AM-3.00 AM)</p>
+                        <p class="address">Ground Floor, SBR Social, Sindhu Bhavan Marg, Bodakdev, Ahmedabad 380054</p>
+                        <p class="status">Open Now</p>
+                        <p class="distance">200.1 km away • 4 hrs 12 mins</p>
+                    </div>
+                    <div class="store-actions">
+                        <button class="action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                </div>
+                <div class="store-bottom">
+                    <span><i class="fa-solid fa-bag-shopping"></i> Takeaway</span>
+                    <span><i class="fa-solid fa-utensils"></i> Dine-in</span>
+                    <span><i class="fa-solid fa-motorcycle"></i> Delivery</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #F5F5DC; border-radius: 15px;">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-5">
+                    <div class="container text-center">
+                        <img src="./assests/logo.png" alt="BK Logo" width="80" class="mb-3">
+                        <h4 style="color: #502314; font-weight: 900;">LOGIN</h4>
+                        <p class="text-muted">Enter your phone number to proceed</p>
+
+                        <div class="login-box mt-4">
+                            <div
+                                class="phone-input d-flex align-items-center border-bottom border-2 border-secondary pb-2 mb-4">
+                                <span class="fw-bold pe-3 border-end border-2">+91</span>
+                                <input type="text" placeholder="Enter 10 digit mobile number" maxlength="10"
+                                    class="form-control border-0 bg-transparent shadow-none ms-2 fw-bold">
+                            </div>
+
+                            <button class="btn w-100 fw-bold py-3 mb-4 rounded-pill"
+                                style="background-color: #D62300; color: white;">ENTER PHONE NUMBER</button>
+
+                            <div class="divider text-muted mb-3">or</div>
+
+                            <button
+                                class="btn w-100 fw-bold py-2 bg-white border border-2 rounded d-flex align-items-center justify-content-center gap-2">
+                                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                                    width="24">
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

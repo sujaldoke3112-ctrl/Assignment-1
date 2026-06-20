@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Deals - Burger King</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./storelocator.css">
+    <link rel="stylesheet" href="./Heroslider.css">
+    <link rel="stylesheet" href="./Menuslider.css">
+    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="./offers.css">
+</head>
+
+<body>
+
+
+    <nav class="w-100 bg-white shadow-sm py-2 position-sticky top-0" style="z-index: 1000;">
+        <div class="d-flex justify-content-around align-items-center">
+            <div>
+                <a class="navbar-brand" href="index.html" style="position: relative; z-index: 1050; cursor: pointer;">
+                    <img src="./Bklogo.png" alt="Burger King" style="width: 50px; height: auto;">
+                </a>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-3 pe-4 border-end border-2">
+                    <span class="fw-bold text-muted" style="font-size: 14px; letter-spacing: 0.5px;">DELIVERY</span>
+
+                    <label class="bk-toggle-switch m-0">
+                        <input type="checkbox" checked>
+                        <span class="bk-toggle-slider"></span>
+                    </label>
+
+                    <span class="fw-bold lh-sm" style="color: #502314; font-size: 14px; letter-spacing: 0.5px;">
+                        DINE-<br>IN/TAKEAWAY
+                    </span>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-pill" placeholder="Search Stores Near By"
+                        aria-label="Store Locator">
+                </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+                <a href="./storeLocator.html" class="customNavItem">Near By Stores
+                    <i class="fa-solid fa-store"></i>
+                </a>
+                <a href="./offers.html" class="customNavItem">King Deals
+                    <i class="fa-solid fa-certificate"></i>
+                </a>
+                <a href="#loginModal" class="nav-link customNavItem d-flex align-items-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#loginModal"
+                    style="font-size: 18px; text-transform: capitalize;">
+                    <i class="fa-solid fa-user"></i> Login
+                </a>
+                <button class="btn fw-bold px-4 rounded-pill" style="background-color: #D62300; color: white;"
+                    onclick="openMessageForCart()">Cart</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="deals-banner">
+
+        <div class="crown-counter">
+            <i class="fa-solid fa-crown" style="color: #F2A900;"></i>
+            <span>0</span>
+        </div>
+
+        <h1 class="deals-title">KING DEALS</h1>
+
+        <div class="deals-toggle-container">
+            <div class="deals-toggle">
+                <button class="toggle-btn inactive">ON DELIVERY</button>
+                <button class="toggle-btn active">
+                    DINE<br>IN/TAKEAWAY
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="deals-content">
+        <div class="container inner-content">
+            <h2 class="limited-deals-title">LIMITED TIME DEALS</h2>
+
+            <div class="deals-tabs">
+                <button class="tab-btn active">King Deals</button>
+                <button class="tab-btn inactive">Crown Rewards</button>
+            </div>
+
+            <div class="empty-state">
+                <p>No offers available !!!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-section">
+        <button class="help-btn">
+            <i class="fa-solid fa-question"></i>
+        </button>
+    </section>
+
+    <section class="crown">
+
+        <img src="./bigimg.jpeg" alt="Crown Image" class="crown-image">
+
+    </section>
+    <div class="loyalty-outer-section">
+
+    </div>
+        <div class="loyalty-disclaimer">
+             Disclaimer : All Images used are illustrative and strictly for representational purposes only
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const dealBtns = document.querySelectorAll('.deals-toggle .toggle-btn');
+
+        dealBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+
+                dealBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.classList.add('inactive');
+                });
+
+                this.classList.remove('inactive');
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #F5F5DC; border-radius: 15px;">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-5">
+                    <div class="container text-center">
+                        <img src="./assests/logo.png" alt="BK Logo" width="80" class="mb-3">
+                        <h4 style="color: #502314; font-weight: 900;">LOGIN</h4>
+                        <p class="text-muted">Enter your phone number to proceed</p>
+
+                        <div class="login-box mt-4">
+                            <div
+                                class="phone-input d-flex align-items-center border-bottom border-2 border-secondary pb-2 mb-4">
+                                <span class="fw-bold pe-3 border-end border-2">+91</span>
+                                <input type="text" placeholder="Enter 10 digit mobile number" maxlength="10"
+                                    class="form-control border-0 bg-transparent shadow-none ms-2 fw-bold">
+                            </div>
+
+                            <button class="btn w-100 fw-bold py-3 mb-4 rounded-pill"
+                                style="background-color: #D62300; color: white;">ENTER PHONE NUMBER</button>
+
+                            <div class="divider text-muted mb-3">or</div>
+
+                            <button
+                                class="btn w-100 fw-bold py-2 bg-white border border-2 rounded d-flex align-items-center justify-content-center gap-2">
+                                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                                    width="24">
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bk-footer">
+        <div class="footer-top">
+
+            <div class="footer-column">
+                <h4>BK&reg; INFO</h4>
+                <a href="#">About BK&reg;</a>
+                <a href="#">Fresh Taste</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Fssai</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>CONTACT</h4>
+                <a href="#">FAQ's & Support</a>
+                <p class="footer-subtext">Write to us :</p>
+                <a href="#">Careers</a>
+                <a href="#">Customer Care</a>
+                <a href="#">Supply Chain Queries</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Franchising</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>BK&reg; CARES</h4>
+                <a href="#">Nutrition Information</a>
+                <a href="#">Creating Brighter Futures</a>
+                <a href="#">Trust & Taste</a>
+                <a href="#">COVID-19 Safety</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>LEGAL</h4>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Promotional T & C</a>
+                <a href="#">Compliance</a>
+            </div>
+
+            <div class="footer-column app-column">
+                <h4>DOWNLOAD OUR APP</h4>
+                <div class="app-badges-row">
+                    <a href="#"><img src="./Apple Store.png" alt="App Store" class="app-badge"></a>
+                    <a href="#"><img src="./Google Play.png" alt="Google Play" class="app-badge"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-divider-container">
+            <hr class="footer-divider">
+        </div>
+
+        <div class="footer-bottom">
+            <img src="./assests/logo.png" alt="BK Logo" class="footer-logo">
+            <p>TM & &copy; 2026 BURGER KING COMPANY LLC . All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
